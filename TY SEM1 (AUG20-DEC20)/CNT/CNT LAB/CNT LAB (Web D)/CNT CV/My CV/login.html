@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>HTML FORM</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="responsive.css">
+    
+</head>
+
+<body>
+<video src="bg_video.mp4" class="video-bg" autoplay loop muted></video>
+
+
+    <div class="container">
+        <h2>Login Form</h2>
+
+        <form name="loginform" onsubmit="return validateForm()" action="cv_lab1.html">
+            <label for="email">Username :</label>
+            <input type="email" placeholder="Enter Username" id="username" name="username" required>
+            <br><br>
+            <label for="pwd">Password :</label>
+            <input type="password" placeholder="Enter Password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 11 or more characters" required>
+            <br><br>
+            <input class="login" type="submit" value="Login">
+        </form>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var un = document.forms["loginform"]["username"].value;
+            var pw = document.forms["loginform"]["pwd"].value;
+
+            if ((un == "dhanraj.kore18@vit.edu") && (pw == "Dhanraj@1234")) {
+                return true;
+            }
+            else {
+                alert("Incorrect Credentials");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

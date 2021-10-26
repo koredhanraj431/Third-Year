@@ -1,0 +1,30 @@
+import sys
+sys.path.insert(0, 'Interpreter')
+
+import Interpreter
+import sys
+
+compileFile = False
+
+def getFileText(name):
+    nameArray = name.split('.')
+    if nameArray[len(nameArray) - 1] != 'bs':
+        print('INVALID FILE EXTENTION')
+        return None
+    file = open(name, 'r')
+    text = file.read()
+    return text
+
+while True and not compileFile:
+    if len(sys.argv) < 2:
+        text = input('lazy >> ')
+        if text.strip() == "quit()": break
+        if text.strip() == "": continue
+    else:
+        compileFile = True
+        text = getFileText(sys.argv[1])
+    if text != None:
+        result, error = Interpreter.run('<stdin>', text)
+
+        if error:
+            print(error.as_string())

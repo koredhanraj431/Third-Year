@@ -1,0 +1,4 @@
+#greet fun
+FUN greet(msg,person)->msg+person
+PRINT(greet("Good Morning"," everyone!"))
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        .container {
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+    <script>
+        function validate() {
+
+            if (document.myForm.firstname.value == "") {
+                alert("Please provide your First name!");
+                document.myForm.firstname.focus();
+                return false;
+            }
+            if (document.myForm.lastname.value == "") {
+                alert("Please provide your Last name!");
+                document.myForm.lastname.focus();
+                return false;
+            }
+            if (document.myForm.course.value == "course") {
+                alert("Please select your Course!");
+                return false;
+            }
+            if (document.myForm.gender.value == "") {
+                alert("Please select your Gender!");
+                document.myForm.gender.focus();
+                return false;
+            }
+            if (document.myForm.dob.value == "") {
+                alert("Please provide your Date-of-Birth!");
+                document.myForm.dob.focus();
+                return false;
+            }
+            if (document.myForm.mob.value == "") {
+                alert("Please provide your Mobile No!");
+                document.myForm.mob.focus();
+                return false;
+            }
+
+            if (document.myForm.address.value == "") {
+                alert("Please provide your Address!");
+                document.myForm.address.focus();
+                return false;
+            }
+            if (document.myForm.Email.value == "") {
+                alert("Please provide your Email!");
+                document.myForm.Email.focus();
+                return false;
+            }
+            if (document.myForm.pass.value == "" || document.myForm.repass.value == "") {
+                alert("Please provide your Password!");
+                return false;
+            }
+            if (document.myForm.pass.value != document.myForm.repass.value) {
+                alert("Password & Confirm Password must be same!");
+                return false;
+            }
+
+            return (true);
+        }
+    </script>
+</head>
+
+<body>
+    <br>
+    <br>
+    <form name="myForm" onsubmit="return validate()">
+
+        <div class="container">
+            <h1> Student Admission Form</h1>
+
+            <label> Firstname </label>
+            <input type="text" name="firstname" size="15" /> <br> <br>
+            <label> Lastname: </label>
+            <input type="text" name="lastname" size="15" /> <br> <br>
+
+            <label>
+                Course :
+            </label>
+            <select name="course">
+                <option value="course" selected>Select Course</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="MBA">MBA</option>
+                <option value="MCA">MCA</option>
+                <option value="M.Tech">M.Tech</option>
+            </select>
+
+            <br>
+            <br>
+            <label>
+                Gender :
+            </label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+            <label for="dob">DOB : </label>
+            <input type="date" id="dob" name="dob"><br><br>
+            <label>
+                Mobile No :
+            </label>
+            <input type="text" name="country code" value="+91" size="2" />
+            <input type="text" name="mob" size="10" /> <br> <br>
+            <label> Address : </label>
+            <input type="text" name="address">
+            <br> <br>
+            Email:
+            <input type="email" id="email" name="Email" /> <br>
+            <br> <br>
+            Password:
+            <input type="Password" id="pass" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 11 or more characters">
+            <br>
+            <br> <br>
+            Confirm password:
+            <input type="Password" id="repass" name="repass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 11 or more characters">
+            <br> <br>
+            <button type="submit" value="Submit">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Using toggle buttons</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            font-weight: bold;
+        }
+
+        .myimg {
+            margin-top: 10px;
+            height: 250px;
+            width: 250px;
+            border: 4px solid black;
+            border-radius: 2em;
+        }
+
+        .info {
+            background-color: rgb(186, 186, 199);
+            border: 4px solid black;
+            padding: 10px;
+            border-radius: 3em;
+            margin-top: 20px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .header {
+            margin-top: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 4px;
+            border-radius: 3em;
+        }
+
+        .mainbox {
+            border: 2px solid black;
+            background-color: gray;
+            padding: 4px;
+            display: flex;
+            margin-top: 20px;
+            flex-direction: row;
+            flex-basis: 100%;
+            border-radius: 3em;
+            justify-content: space-around;
+        }
+
+        button{
+            border: 2px solid black;
+            border-radius: 2em;
+            
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="header">Curriculum Vitae - Dhanraj Kore</div>
+
+    <div class="mainbox">
+        <button data-toggle="collapse" data-target="#pd" class=" text-primary" style="font-weight: bold;">Personal
+            Details </button>
+        <button data-toggle="collapse" data-target="#ed" class=" text-primary" style="font-weight: bold;">Education
+            Details </button>
+        <button data-toggle="collapse" data-target="#ac" class=" text-primary" style="font-weight: bold;">Achievements
+        </button>
+        <button data-toggle="collapse" data-target="#tk" class=" text-primary" style="font-weight: bold;">Technical
+            Knowledge </button>
+        <button data-toggle="collapse" data-target="#ci" class=" text-primary" style="font-weight: bold;">Contact
+            Information </button>
+    </div>
+
+    <div id="pd" class="collapse">
+        <div class="info">
+            <img src="myimg.jpg" alt="myimg" class="myimg">
+            <p>Name : Dhanraj Kore<br> <br> DOB : November 1999</p>
+        </div>
+    </div>
+    <div id="ed" class="collapse">
+        <div class="info">
+            <p>SSC : 91.60% BHEL Secondary School, Parli-V. <br><br><br><br> HSC : 96.10% VelocIITy Junior College,
+                Hyderabad
+                <br><br><br><br> Pursuing B-Tech : 8 CGPA VIT PUNE</p>
+        </div>
+    </div>
+    <div id="ac" class="collapse">
+        <div class="info">
+            <p>Published paper on : Hydrophobic Coating <br> & its applications <br><br>
+                Selected for Novonmesh round in 1st year's project <br><br> Secured a rank of 1942 in MHT-CET <br><br>
+                Solved a reasonable amount questions on <br> HackerRank and GFG</p>
+        </div>
+    </div>
+    <div id="tk" class="collapse">
+        <div class="info">
+            <p>Languages & Operating System Aware of</p>
+            <p>C, C++, Python Programming Languages Linux OS</p>
+        </div>
+    </div>
+    <div id="ci" class="collapse">
+        <div class="info">
+            <p>Flat no A/2, Mansi Apartment <br><br> Near Chintamani Nagar,Bibwewadi <br> <br>PUNE, pin : 411037
+                <br><br><br> <b>Email</b>
+                : koredhanraj431@gmail.com <br> <br> <b>Mobile</b> : 9021815831</p>
+        </div>
+    </div>
+</body>
+
+</html>
